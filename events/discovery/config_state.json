@@ -6,7 +6,12 @@
   "uid": 2,
   "attributes": {
     "cis_benchmark_result": {
-      "group": "primary"
+      "group": "primary",
+      "requirement": "recommended"
+    },
+  "device": {
+      "group": "primary",
+      "requirement": "recommended"
     }
   }
 }

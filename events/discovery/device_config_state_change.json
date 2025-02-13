@@ -1,7 +1,7 @@
 {
   "uid": 19,
-  "caption": "Device Config State Change",
-  "description": "Device Config State Change events report state changes that impact the security of the device.",
+  "caption": "Device Config Info Change",
+  "description": "Device Config Info Change events report state changes that impact the security of the device.",
   "extends": "discovery",
   "name": "device_config_state_change",
   "attributes": {

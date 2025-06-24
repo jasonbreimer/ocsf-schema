@@ -1,19 +1,19 @@
 {
   "caption": "Compliance",
-  "description": "The Compliance object contains information about Industry and Regulatory Framework standards, controls and requirements or details about custom assessments utilized in a compliance evaluation. Standards define broad security frameworks, controls represent specific security requirements within those frameworks, and checks are the testable verification points used to determine if controls are properly implemented.",
+  "description": "The <strong>Compliance</strong> object contains information about <abbr title=\"Industry and Regulatory Framework\">Industry and Regulatory Framework</abbr> standards, controls and requirements or details about custom assessments utilized in a compliance evaluation. <em>Standards</em> define broad security frameworks, <em>controls</em> represent specific security requirements within those frameworks, and <em>checks</em> are the testable verification points used to determine if controls are properly implemented.",
   "extends": "object",
   "name": "compliance",
   "attributes": {
     "assessments": {
-      "description": "A list of assessments associated with the compliance requirements evaluation.",
+      "description": "A list of <strong>assessments</strong> associated with the compliance requirements evaluation.",
       "requirement": "optional"
     },
     "category": {
-      "description": "The category a control framework pertains to, as reported by the source tool, such as <code>Asset Management</code> or <code>Risk Assessment</code>.",
+      "description": "The <var>category</var> a control framework pertains to, as reported by the source tool, such as <code>Asset Management</code> or <code>Risk Assessment</code>.",
       "requirement": "optional"
     },
     "checks": {
-      "description": "A list of compliance checks associated with specific industry standards or frameworks. Each check represents an individual rule or requirement that has been evaluated against a target device. Checks typically include details such as the check name (e.g., CIS: 'Ensure mounting of cramfs filesystems is disabled' or DISA STIG descriptive titles), unique identifiers (such as CIS identifier '1.1.1.1' or DISA STIG identifier 'V-230234'), descriptions (detailed explanations of security requirements or vulnerability discussions), and version information.",
+      "description": "A list of <strong>compliance checks</strong> associated with specific industry standards or frameworks. Each check represents an individual rule or requirement that has been evaluated against a target device. Checks typically include details such as the <em>check name</em> (e.g., <cite>CIS: 'Ensure mounting of cramfs filesystems is disabled'</cite> or <cite>DISA STIG descriptive titles</cite>), <u>unique identifiers</u> (such as <abbr title=\"Center for Internet Security\">CIS</abbr> identifier <code>1.1.1.1</code> or <abbr title=\"Defense Information Systems Agency Security Technical Implementation Guide\">DISA STIG</abbr> identifier <code>V-230234</code>), descriptions (detailed explanations of security requirements or vulnerability discussions), and <em>version information</em>.",
       "requirement": "optional",
       "references": [
         {
@@ -29,20 +29,20 @@
     "compliance_references": {
       "requirement": "optional",
       "@deprecated": {
-        "message": "Use the Compliance object with Check array instead.",
+        "message": "Use the <strong>Compliance</strong> object with <em>Check</em> array instead.",
         "since": "1.5.0"
       }
     },
     "compliance_standards": {
       "requirement": "optional",
       "@deprecated": {
-        "message": "Use the Compliance object with Check array instead.",
+        "message": "Use the <strong>Compliance</strong> object with <em>Check</em> array instead.",
         "since": "1.5.0"
       }
     },
     "control": {
       "requirement": "recommended",
-      "description": "A Control is a prescriptive, actionable set of specifications that strengthens device posture. The control specifies required security measures, while the specific implementation values are defined in control_parameters. E.g., CIS AWS Foundations Benchmark 1.2.0 - Control 2.1 - Ensure CloudTrail is enabled in all regions",
+      "description": "A <dfn>Control</dfn> is a prescriptive, actionable set of specifications that strengthens device posture. The control specifies <mark>required security measures</mark>, while the specific implementation values are defined in <var>control_parameters</var>. <strong>Example:</strong> <cite>CIS AWS Foundations Benchmark 1.2.0 - Control 2.1 - Ensure CloudTrail is enabled in all regions</cite>",
       "references": [
         {
           "description": "CIS AWS Foundations Benchmark 1.2.0",
@@ -56,7 +56,7 @@
     },
     "control_parameters": {
       "requirement": "optional",
-      "description": "The list of control parameters evaluated in a Compliance check. E.g., parameters for CloudTrail configuration might include <code>multiRegionTrailEnabled: true</code>, <code>logFileValidationEnabled: true</code>, and <code>requiredRegions: [us-east-1, us-west-2]</code>",
+      "description": "The list of <strong>control parameters</strong> evaluated in a Compliance check. <strong>Example:</strong> parameters for <abbr title=\"Amazon Web Services CloudTrail\">CloudTrail</abbr> configuration might include <code>multiRegionTrailEnabled: true</code>, <code>logFileValidationEnabled: true</code>, and <code>requiredRegions: [us-east-1, us-west-2]</code>",
       "references": [
         {
           "description": "AWS CloudTrail Configuration Parameters",
@@ -73,12 +73,12 @@
       ]
     },
     "desc": {
-      "description": "The description or criteria of a control.",
+      "description": "The <em>description</em> or <em>criteria</em> of a control.",
       "requirement": "optional"
     },
     "requirements": {
       "requirement": "optional",
-      "description": "The specific compliance requirements being evaluated. E.g., <code>PCI DSS Requirement 8.2.3 - Passwords must meet minimum complexity requirements</code> or <code>HIPAA Security Rule 164.312(a)(2)(iv) - Implement encryption and decryption mechanisms</code>",
+      "description": "The specific <strong>compliance requirements</strong> being evaluated. <strong>Examples:</strong> <code>PCI DSS Requirement 8.2.3 - Passwords must meet minimum complexity requirements</code> or <code>HIPAA Security Rule 164.312(a)(2)(iv) - Implement encryption and decryption mechanisms</code>",
       "references": [
         {
           "description": "PCI DSS Standards",
@@ -92,7 +92,7 @@
     },
     "standards": {
       "requirement": "recommended",
-      "description": "The regulatory or industry standards being evaluated for compliance.",
+      "description": "The <em>regulatory</em> or <em>industry standards</em> being evaluated for compliance. <small>Common standards include <abbr title=\"Payment Card Industry Data Security Standard\">PCI DSS</abbr>, <abbr title=\"Health Insurance Portability and Accountability Act\">HIPAA</abbr>, <abbr title=\"National Institute of Standards and Technology\">NIST</abbr>, and <abbr title=\"International Organization for Standardization\">ISO</abbr>.</small>",
       "references": [
         {
           "description": "PCI DSS 3.2.1",
@@ -113,39 +113,39 @@
       ]
     },
     "status": {
-      "description": "The resultant status of the compliance check normalized to the caption of the <code>status_id</code> value. In the case of 'Other', it is defined by the event source.",
+      "description": "The <em>resultant status</em> of the compliance check normalized to the caption of the <code>status_id</code> value. In the case of <samp>'Other'</samp>, it is defined by the event source.",
       "requirement": "recommended"
     },
     "status_code": {
-      "description": "The resultant status code of the compliance check.",
+      "description": "The <em>resultant status code</em> of the compliance check.",
       "requirement": "optional"
     },
     "status_detail": {
       "@deprecated": {
-        "message": "Use the <code> status_details </code> attribute instead.",
+        "message": "Use the <code>status_details</code> attribute instead.",
         "since": "1.4.0"
       },
-      "description": "The contextual description of the <code>status, status_code</code> values.",
+      "description": "The contextual description of the <code>status</code>, <code>status_code</code> values.",
       "requirement": "optional"
     },
     "status_details": {
-      "description": "A list of contextual descriptions of the <code>status, status_code</code> values.",
+      "description": "A list of <strong>contextual descriptions</strong> of the <code>status</code>, <code>status_code</code> values.",
       "requirement": "optional"
     },
     "status_id": {
-      "description": "The normalized status identifier of the compliance check.",
+      "description": "The <u>normalized status identifier</u> of the compliance check.",
       "enum": {
         "1": {
           "caption": "Pass",
-          "description": "The compliance check passed for all the evaluated resources."
+          "description": "The compliance check <span class=\"text-success font-weight-bold\">passed</span> for <em>all</em> the evaluated resources."
         },
         "2": {
           "caption": "Warning",
-          "description": "The compliance check did not yield a result due to missing information."
+          "description": "The compliance check did <strong>not</strong> yield a result due to <mark>missing information</mark>."
         },
         "3": {
           "caption": "Fail",
-          "description": "The compliance check failed for at least one of the evaluated resources."
+          "description": "The compliance check <span class=\"text-danger font-weight-bold\">failed</span> for <em>at least one</em> of the evaluated resources."
         }
       },
       "requirement": "recommended"

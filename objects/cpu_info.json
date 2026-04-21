@@ -1,0 +1,53 @@
+{
+  "caption": "CPU Information",
+  "description": "The CPU information object contains attributes describing central processing unit hardware.",
+  "extends": "object",
+  "name": "cpu_info",
+  "attributes": {
+    "cpu_architecture": {
+      "description": "The CPU architecture, normalized to the caption of the cpu_architecture_id value. In the case of Other, it is defined by the source.",
+      "requirement": "optional"
+    },
+    "cpu_architecture_id": {
+      "description": "The normalized identifier of the CPU architecture.",
+      "requirement": "optional",
+      "enum": {
+        "0": {
+          "caption": "Unknown"
+        },
+        "1": {
+          "caption": "x86"
+        },
+        "2": {
+          "caption": "ARM"
+        },
+        "3": {
+          "caption": "RISC-V"
+        },
+        "99": {
+          "caption": "Other"
+        }
+      }
+    },
+    "cpu_bits": {
+      "description": "The number of bits used by the CPU for memory addressing.",
+      "requirement": "optional"
+    },
+    "cores": {
+      "requirement": "optional"
+    },
+    "speed_mhz": {
+      "caption": "Compute Unit Speed",
+      "description": "The nominal operating speed of the compute unit, expressed in megahertz.",
+      "requirement": "optional"
+    },
+    "model": {
+      "description": "The model name of the CPU. For example: <code>Intel Xeon Gold 6348</code>, <code>AMD EPYC 7763</code>, or <code>Apple M3 Max</code>.",
+      "requirement": "recommended"
+    },
+    "vendor_name": {
+      "description": "The name of the vendor of the CPU. For example: <code>Intel</code>, <code>AMD</code>, or <code>Apple</code>.",
+      "requirement": "recommended"
+    }
+  }
+}

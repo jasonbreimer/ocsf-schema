@@ -31,6 +31,9 @@
     "cpu_count": {
       "requirement": "optional"
     },
+    "cpu_info_list": {
+      "requirement": "optional"
+    },
     "cpu_speed": {
       "requirement": "optional"
     },

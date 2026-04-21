@@ -1615,6 +1615,12 @@
       "description": "The number of physical processors on a system. For example: <code>1</code>.",
       "type": "integer_t"
     },
+    "cpu_info_list": {
+      "caption": "CPU information",
+      "description": "An array of objects describing describing Central Processing Unit hardware.",
+      "type": "cpu_info",
+      "is_array": true
+    },
     "cpu_speed": {
       "caption": "Processor Speed",
       "description": "The speed of the processor in Mhz. For Example: <code>4200</code>.",
@@ -6112,6 +6118,11 @@
       "caption": "Speed Accuracy",
       "description": "Provides quality/containment on horizontal ground speed. Measured in meters/second.",
       "type": "string_t"
+    },
+    "speed_mhz": {
+      "caption": "Compute Unit Speed (MHz)",
+      "description": "The nominal clock speed of the unit, expressed in megahertz.",
+      "type": "integer_t"
     },
     "spf": {
       "caption": "SPF Status",
